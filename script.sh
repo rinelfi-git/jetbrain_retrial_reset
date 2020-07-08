@@ -17,11 +17,14 @@ if [ ${operating_system} == "Linux" ]; then
   for product in ${jetbrain_products[*]}
     do
     cd ${config_directory}
-    directory=$(ls -d ${product}*)
-    if [ -n ${directory} ] && [ -e ${directory} ]; then
-      echo "==========================================="
-      echo "             "${directory}
-      echo "==========================================="
+    directory=""
+    if [ ! -z $(find -name ${product}*) ]; then
+      directory=$(ls -d ${product}*)
+    fi
+    if [ ! -z ${directory} ] && [ -d ${directory} ]; then
+      echo "=============================================="
+      echo "               \"${directory}\"                  "
+      echo "=============================================="
       echo "delete \"eval\" directory at: ${config_directory}/eval"
       cd ${directory}
       if [ -e eval ]; then
@@ -54,7 +57,7 @@ if [ ${operating_system} == "Linux" ]; then
     fi
     cd ${current_directory}
   done
-  echo -e "\n\n             CONGRATULATION!\n         YOUR LICENCE IS NOW RESET\n\n"
+  echo -e "\n\n                CONGRATULATION!\n           YOUR LICENCE IS NOW RESET\n\n"
 else
   echo "The operating system is not supported yet"
 fi
