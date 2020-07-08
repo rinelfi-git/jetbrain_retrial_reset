@@ -1,7 +1,7 @@
 #!/bin/bash
 # définitin des variables
 operating_system=$(uname -s)
-jetbrain_products=("PhpStorm" "WebStorm")
+jetbrain_products=("PhpStorm" "WebStorm" "IntelliJIdea" "CLion" "GoLand" "PyCharm" "Rider" "DataGrip" "RubyMine" "AppCode")
 config_directory=${HOME}"/.config/JetBrains"
 java_directory=${HOME}"/.java/.userPrefs"
 current_directory=${pdw}
