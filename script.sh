@@ -1,5 +1,5 @@
 #!/bin/bash
-# définitin des variables
+# variable initialization
 operating_system=$(uname -s)
 jetbrain_products=("PhpStorm" "WebStorm" "IntelliJIdea" "CLion" "GoLand" "PyCharm" "Rider" "DataGrip" "RubyMine" "AppCode")
 config_directory=${HOME}"/.config/JetBrains"
